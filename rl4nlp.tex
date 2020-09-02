@@ -31,15 +31,17 @@ In 2016, DeepMind put Reinforcement Learning (RL) in the spotlights by developin
 
 
 \section{Trends for NLP in RL}
-Most RL models still utilise the REINFORCE algorithm or Deep Q Learning as their method.
+Dialogue 
+Most RL models still utilise the the policy gradient REINFORCE algorithm or Deep Q Learning as their method.
 
 \section{Problems for NLP in RL}
 Research faces a few problems regarding the application of RL in NLP. 
 
-The question of how important state is in RL from a NLP perspective has been discussed by \citet{madureira2020}.
+While most research focuses on the reward function in order to maximize the agent's expected long-term reward, \citet{madureira2020} discussed the importance of state in RL for NLP. While the formalisation of the state and its properties depends on the value and reward function, 
 
 \subsection{Data and Language}
-While anglocentrism dominates most research fields, NLP and more specifically RL are no exception. This is due to English continuing to be the main language in which research is written and communicated and therefore most available corpora of sufficient size are English as well. While this is not a problem per se, it compels many researchers to also use English as their main language for conducting their experiments due to available data and funding for English research. This homogeneity 
+\textbf{Anglocentrism} dominates most research fields, with NLP and more specifically RL being no exception. This is due to English continuing to be the main language in which research is written and communicated. While this is not a problem per se, it compels many researchers to also use English as their main language for conducting their experiments due to available data and funding for English research. This homogeneity is a common property of a young research field but still needs to be overcome by broadening up to other languages. This is not only important in terms of ethical diversity but also a necessary step to achieve overall application of RL across languages. \\\\
+\textbf{Data} is not only limited in language but also in size and diversity. Since RL models tend to improve by larger corpora, it becomes exponentially difficult to provide datasets of sufficient quality by increase of size. Consequently, many studies are performed on the same datasets.
 
 
 \section{Conclusion}
