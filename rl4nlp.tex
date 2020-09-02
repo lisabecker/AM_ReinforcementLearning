@@ -31,13 +31,14 @@ In 2016, DeepMind put Reinforcement Learning (RL) in the spotlights by developin
 
 
 \section{Trends for NLP in RL}
-Dialogue 
+More Deep RL is implemented. 
+\textbf{Dialogues} have been among the most popular subdomains.\\\\ 
 Most RL models still utilise the the policy gradient REINFORCE algorithm or Deep Q Learning as their method.
 
 \section{Problems for NLP in RL}
 Research faces a few problems regarding the application of RL in NLP. 
 
-While most research focuses on the reward function in order to maximize the agent's expected long-term reward, \citet{madureira2020} discussed the importance of state in RL for NLP. While the formalisation of the state and its properties depends on the value and reward function, 
+While most research focuses on the reward function in order to maximize the agent's expected long-term reward, \citet{madureira2020} discussed the importance of state in RL for NLP. While the formalisation of the state and its properties depends on the value and reward function, there is less attention directed towards the state. This shows for example in the fact that many researchers neglect describing their state signal and the reasoning of their choice, which alone makes understanding and replicating their models more difficult. With the rise of neural network models in RL for NLP, states could be more easily represented by a vector and thus more easily fed into the value or policy function. \citet{madureira2020} appealed for more linguistically interpretable and grounded state representations next to encouraging researchers to pay more attention to the choice of their state function, its explanation and respective evaluation in the paper.
 
 \subsection{Data and Language}
 \textbf{Anglocentrism} dominates most research fields, with NLP and more specifically RL being no exception. This is due to English continuing to be the main language in which research is written and communicated. While this is not a problem per se, it compels many researchers to also use English as their main language for conducting their experiments due to available data and funding for English research. This homogeneity is a common property of a young research field but still needs to be overcome by broadening up to other languages. This is not only important in terms of ethical diversity but also a necessary step to achieve overall application of RL across languages. \\\\
