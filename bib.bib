@@ -25,275 +25,369 @@
  year = {2016},
  title = {Mastering the game of Go with deep neural networks and tree search},
  volume = {529},
- pages= {484-489}
+ pages= {484-489},
  journal = {Nature},
 }
 
-
-
-
-
-
-
-@mastersthesis{Verachtert2017,
- author = {L. Verachtert},
- year = {2017},
- title = {A stylometric approach to detecting schizophrenia from writing},
- school={University of Antwerp},
- address={Belgium}
+@inproceedings{dethlefs-cuayahuitl-2011,
+    title = "Hierarchical Reinforcement Learning and Hidden {M}arkov Models for Task-Oriented Natural Language Generation",
+    author = "Dethlefs, Nina  and
+      Cuay{\'a}huitl, Heriberto",
+    booktitle = "Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies",
+    month = jun,
+    year = "2011",
+    address = "Portland, Oregon, USA",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/P11-2115",
+    pages = "654--659",
 }
 
-@article{Frog,
-title = {An efficient memory-based morphosyntactic tagger and parser for Dutch},
-author = {A. Bosch and W. Daelemans and G. J. Busser and S. Canisius},
-year = {2007},
-editor = {F. van Eynde and  P. Dirix and I. Schuurman and V. Vandeghinste},
-address = {Leuven, Belgium},
-pages = {99-114},
-booktitle = {Selected Papers of the 17th Computational Linguistics in the Netherlands Meeting}
+@inproceedings{yasui-etal-2019,
+    title = "Using Semantic Similarity as Reward for Reinforcement Learning in Sentence Generation",
+    author = "Yasui, Go  and
+      Tsuruoka, Yoshimasa  and
+      Nagata, Masaaki",
+    booktitle = "Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics: Student Research Workshop",
+    month = jul,
+    year = "2019",
+    address = "Florence, Italy",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/P19-2056",
+    doi = "10.18653/v1/P19-2056",
+    pages = "400--406",
+    abstract = "Traditional model training for sentence generation employs cross-entropy loss as the loss function. While cross-entropy loss has convenient properties for supervised learning, it is unable to evaluate sentences as a whole, and lacks flexibility. We present the approach of training the generation model using the estimated semantic similarity between the output and reference sentences to alleviate the problems faced by the training with cross-entropy loss. We use the BERT-based scorer fine-tuned to the Semantic Textual Similarity (STS) task for semantic similarity estimation, and train the model with the estimated scores through reinforcement learning (RL). Our experiments show that reinforcement learning with semantic similarity reward improves the BLEU scores from the baseline LSTM NMT model.",
 }
 
-@article{Grieve,
- author = {J. Grieve and I. Clarke and E. Chiang and H. Gideon and A. Heini and A. Nini and E. Waibel},
- year = {2018},
- title = {Attributing the Bixby Letter using n-gram tracing},
- volume = {16},
- journal = {Digital Scholarship in the Humanities},
+@paper{Zhang-2018,
+	author = {Tianyang Zhang and Minlie Huang and Li Zhao},
+	title = {Learning Structured Representation for Text Classification via Reinforcement Learning},
+	conference = {AAAI Conference on Artificial Intelligence},
+	year = {2018},
+	keywords = {Reinforcement Learning; Structure; Text Classification},
+	abstract = {Representation learning is a fundamental problem in natural language processing. This paper studies how to learn a structured representation for text classification. Unlike most existing representation models that either use no structure or rely on pre-specified structures, we propose a reinforcement learning (RL) method to learn sentence representation by discovering optimized structures automatically. We demonstrate two attempts to build structured representation: Information Distilled LSTM (ID-LSTM) and Hierarchically Structured LSTM (HS-LSTM). ID-LSTM selects only important, task-relevant words, and HS-LSTM discovers phrase structures in a sentence. Structure discovery in the two representation models is formulated as a sequential decision problem: current decision of structure discovery affects following decisions, which can be addressed by policy gradient RL. Results show that our method can learn task-friendly representations by identifying important words or task-relevant structures without explicit structure annotations, and thus yields competitive performance.},
+	url = {https://aaai.org/ocs/index.php/AAAI/AAAI18/paper/view/16537}
 }
 
+@inproceedings{le-fokkens-2017-tackling,
+    title = "Tackling Error Propagation through Reinforcement Learning: A Case of Greedy Dependency Parsing",
+    author = "L{\^e}, Minh  and
+      Fokkens, Antske",
+    booktitle = "Proceedings of the 15th Conference of the {E}uropean Chapter of the Association for Computational Linguistics: Volume 1, Long Papers",
+    month = apr,
+    year = "2017",
+    address = "Valencia, Spain",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/E17-1064",
+    pages = "677--687",
+    abstract = "Error propagation is a common problem in NLP. Reinforcement learning explores erroneous states during training and can therefore be more robust when mistakes are made early in a process. In this paper, we apply reinforcement learning to greedy dependency parsing which is known to suffer from error propagation. Reinforcement learning improves accuracy of both labeled and unlabeled dependencies of the Stanford Neural Dependency Parser, a high performance greedy parser, while maintaining its efficiency. We investigate the portion of errors which are the result of error propagation and confirm that reinforcement learning reduces the occurrence of error propagation.",
+}
 
-@article{Mota2017,
-author = {N. Mota and M. Copelli and S. Ribeiro},
+@inproceedings{hu-etal-2018-playing,
+    title = "Playing 20 Question Game with Policy-Based Reinforcement Learning",
+    author = "Hu, Huang  and
+      Wu, Xianchao  and
+      Luo, Bingfeng  and
+      Tao, Chongyang  and
+      Xu, Can  and
+      Wu, Wei  and
+      Chen, Zhan",
+    booktitle = "Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing",
+    month = oct # "-" # nov,
+    year = "2018",
+    address = "Brussels, Belgium",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/D18-1361",
+    doi = "10.18653/v1/D18-1361",
+    pages = "3233--3242",
+    abstract = "The 20 Questions (Q20) game is a well known game which encourages deductive reasoning and creativity. In the game, the answerer first thinks of an object such as a famous person or a kind of animal. Then the questioner tries to guess the object by asking 20 questions. In a Q20 game system, the user is considered as the answerer while the system itself acts as the questioner which requires a good strategy of question selection to figure out the correct object and win the game. However, the optimal policy of question selection is hard to be derived due to the complexity and volatility of the game environment. In this paper, we propose a novel policy-based Reinforcement Learning (RL) method, which enables the questioner agent to learn the optimal policy of question selection through continuous interactions with users. To facilitate training, we also propose to use a reward network to estimate the more informative reward. Compared to previous methods, our RL method is robust to noisy answers and does not rely on the Knowledge Base of objects. Experimental results show that our RL method clearly outperforms an entropy-based engineering system and has competitive performance in a noisy-free simulation environment.",
+}
+
+@inproceedings{godin-etal-2019-learning,
+    title = "Learning When Not to Answer: a Ternary Reward Structure for Reinforcement Learning Based Question Answering",
+    author = "Godin, Fr{\'e}deric  and
+      Kumar, Anjishnu  and
+      Mittal, Arpit",
+    booktitle = "Proceedings of the 2019 Conference of the North {A}merican Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 2 (Industry Papers)",
+    month = jun,
+    year = "2019",
+    address = "Minneapolis, Minnesota",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/N19-2016",
+    doi = "10.18653/v1/N19-2016",
+    pages = "122--129",
+    abstract = "In this paper, we investigate the challenges of using reinforcement learning agents for question-answering over knowledge graphs for real-world applications. We examine the performance metrics used by state-of-the-art systems and determine that they are inadequate for such settings. More specifically, they do not evaluate the systems correctly for situations when there is no answer available and thus agents optimized for these metrics are poor at modeling confidence. We introduce a simple new performance metric for evaluating question-answering agents that is more representative of practical usage conditions, and optimize for this metric by extending the binary reward structure used in prior work to a ternary reward structure which also rewards an agent for not answering a question rather than giving an incorrect answer. We show that this can drastically improve the precision of answered questions while only not answering a limited number of previously correctly answered questions. Employing a supervised learning strategy using depth-first-search paths to bootstrap the reinforcement learning algorithm further improves performance.",
+}
+
+@inproceedings{huang-etal-2018-neural,
+    title = "Neural Math Word Problem Solver with Reinforcement Learning",
+    author = "Huang, Danqing  and
+      Liu, Jing  and
+      Lin, Chin-Yew  and
+      Yin, Jian",
+    booktitle = "Proceedings of the 27th International Conference on Computational Linguistics",
+    month = aug,
+    year = "2018",
+    address = "Santa Fe, New Mexico, USA",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/C18-1018",
+    pages = "213--223",
+    abstract = "Sequence-to-sequence model has been applied to solve math word problems. The model takes math problem descriptions as input and generates equations as output. The advantage of sequence-to-sequence model requires no feature engineering and can generate equations that do not exist in training data. However, our experimental analysis reveals that this model suffers from two shortcomings: (1) generate spurious numbers; (2) generate numbers at wrong positions. In this paper, we propose incorporating copy and alignment mechanism to the sequence-to-sequence model (namely CASS) to address these shortcomings. To train our model, we apply reinforcement learning to directly optimize the solution accuracy. It overcomes the {``}train-test discrepancy{''} issue of maximum likelihood estimation, which uses the surrogate objective of maximizing equation likelihood during training while the evaluation metric is solution accuracy (non-differentiable) at test time. Furthermore, to explore the effectiveness of our neural model, we use our model output as a feature and incorporate it into the feature-based model. Experimental results show that (1) The copy and alignment mechanism is effective to address the two issues; (2) Reinforcement learning leads to better performance than maximum likelihood on this task; (3) Our neural model is complementary to the feature-based model and their combination significantly outperforms the state-of-the-art results.",
+}
+
+@inproceedings{narasimhan-etal-2016-improving,
+    title = "Improving Information Extraction by Acquiring External Evidence with Reinforcement Learning",
+    author = "Narasimhan, Karthik  and
+      Yala, Adam  and
+      Barzilay, Regina",
+    booktitle = "Proceedings of the 2016 Conference on Empirical Methods in Natural Language Processing",
+    month = nov,
+    year = "2016",
+    address = "Austin, Texas",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/D16-1261",
+    doi = "10.18653/v1/D16-1261",
+    pages = "2355--2365",
+}
+
+@inproceedings{mosallanezhad-etal-2019-deep,
+    title = "Deep Reinforcement Learning-based Text Anonymization against Private-Attribute Inference",
+    author = "Mosallanezhad, Ahmadreza  and
+      Beigi, Ghazaleh  and
+      Liu, Huan",
+    booktitle = "Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)",
+    month = nov,
+    year = "2019",
+    address = "Hong Kong, China",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/D19-1240",
+    doi = "10.18653/v1/D19-1240",
+    pages = "2360--2369",
+    abstract = "User-generated textual data is rich in content and has been used in many user behavioral modeling tasks. However, it could also leak user private-attribute information that they may not want to disclose such as age and location. User{'}s privacy concerns mandate data publishers to protect privacy. One effective way is to anonymize the textual data. In this paper, we study the problem of textual data anonymization and propose a novel Reinforcement Learning-based Text Anonymizor, RLTA, which addresses the problem of private-attribute leakage while preserving the utility of textual data. Our approach first extracts a latent representation of the original text w.r.t. a given task, then leverages deep reinforcement learning to automatically learn an optimal strategy for manipulating text representations w.r.t. the received privacy and utility feedback. Experiments show the effectiveness of this approach in terms of preserving both privacy and utility.",
+}
+
+@inproceedings{mao-etal-2018-end,
+    title = "End-to-End Reinforcement Learning for Automatic Taxonomy Induction",
+    author = "Mao, Yuning  and
+      Ren, Xiang  and
+      Shen, Jiaming  and
+      Gu, Xiaotao  and
+      Han, Jiawei",
+    booktitle = "Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    month = jul,
+    year = "2018",
+    address = "Melbourne, Australia",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/P18-1229",
+    doi = "10.18653/v1/P18-1229",
+    pages = "2462--2472",
+    abstract = "We present a novel end-to-end reinforcement learning approach to automatic taxonomy induction from a set of terms. While prior methods treat the problem as a two-phase task (\textit{i.e.},, detecting hypernymy pairs followed by organizing these pairs into a tree-structured hierarchy), we argue that such two-phase methods may suffer from error propagation, and cannot effectively optimize metrics that capture the holistic structure of a taxonomy. In our approach, the representations of term pairs are learned using multiple sources of information and used to determine \textit{which} term to select and \textit{where} to place it on the taxonomy via a policy network. All components are trained in an end-to-end manner with cumulative rewards, measured by a holistic tree metric over the training taxonomies. Experiments on two public datasets of different domains show that our approach outperforms prior state-of-the-art taxonomy induction methods up to 19.6{\%} on ancestor F1.",
+}
+
+@inproceedings{li-etal-2016-deep,
+    title = "Deep Reinforcement Learning for Dialogue Generation",
+    author = "Li, Jiwei  and
+      Monroe, Will  and
+      Ritter, Alan  and
+      Jurafsky, Dan  and
+      Galley, Michel  and
+      Gao, Jianfeng",
+    booktitle = "Proceedings of the 2016 Conference on Empirical Methods in Natural Language Processing",
+    month = nov,
+    year = "2016",
+    address = "Austin, Texas",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/D16-1127",
+    doi = "10.18653/v1/D16-1127",
+    pages = "1192--1202",
+}
+
+@misc{ranzato2015sequence,
+    title={Sequence Level Training with Recurrent Neural Networks},
+    author={Marc'Aurelio Ranzato and Sumit Chopra and Michael Auli and Wojciech Zaremba},
+    year={2015},
+    eprint={1511.06732},
+    archivePrefix={arXiv},
+    primaryClass={cs.LG}
+}
+
+@inproceedings{wu-etal-2018-study,
+    title = "A Study of Reinforcement Learning for Neural Machine Translation",
+    author = "Wu, Lijun  and
+      Tian, Fei  and
+      Qin, Tao  and
+      Lai, Jianhuang  and
+      Liu, Tie-Yan",
+    booktitle = "Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing",
+    month = oct # "-" # nov,
+    year = "2018",
+    address = "Brussels, Belgium",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/D18-1397",
+    doi = "10.18653/v1/D18-1397",
+    pages = "3612--3621",
+    abstract = "Recent studies have shown that reinforcement learning (RL) is an effective approach for improving the performance of neural machine translation (NMT) system. However, due to its instability, successfully RL training is challenging, especially in real-world systems where deep models and large datasets are leveraged. In this paper, taking several large-scale translation tasks as testbeds, we conduct a systematic study on how to train better NMT models using reinforcement learning. We provide a comprehensive comparison of several important factors (e.g., baseline reward, reward shaping) in RL training. Furthermore, to fill in the gap that it remains unclear whether RL is still beneficial when monolingual data is used, we propose a new method to leverage RL to further boost the performance of NMT systems trained with source/target monolingual data. By integrating all our findings, we obtain competitive results on WMT14 English-German, WMT17 English-Chinese, and WMT17 Chinese-English translation tasks, especially setting a state-of-the-art performance on WMT17 Chinese-English translation task.",
+}
+
+@inproceedings{grissom-ii-etal-2014-dont,
+    title = "Don{'}t Until the Final Verb Wait: Reinforcement Learning for Simultaneous Machine Translation",
+    author = "Grissom II, Alvin  and
+      He, He  and
+      Boyd-Graber, Jordan  and
+      Morgan, John  and
+      Daum{\'e} III, Hal",
+    booktitle = "Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing ({EMNLP})",
+    month = oct,
+    year = "2014",
+    address = "Doha, Qatar",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/D14-1140",
+    doi = "10.3115/v1/D14-1140",
+    pages = "1342--1352",
+}
+
+@inproceedings{he-etal-2016-deep-reinforcement,
+    title = "Deep Reinforcement Learning with a Natural Language Action Space",
+    author = "He, Ji  and
+      Chen, Jianshu  and
+      He, Xiaodong  and
+      Gao, Jianfeng  and
+      Li, Lihong  and
+      Deng, Li  and
+      Ostendorf, Mari",
+    booktitle = "Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    month = aug,
+    year = "2016",
+    address = "Berlin, Germany",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/P16-1153",
+    doi = "10.18653/v1/P16-1153",
+    pages = "1621--1630",
+}
+
+@inproceedings{chen-bansal-2018-fast,
+    title = "Fast Abstractive Summarization with Reinforce-Selected Sentence Rewriting",
+    author = "Chen, Yen-Chun  and
+      Bansal, Mohit",
+    booktitle = "Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    month = jul,
+    year = "2018",
+    address = "Melbourne, Australia",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/P18-1063",
+    doi = "10.18653/v1/P18-1063",
+    pages = "675--686",
+    abstract = "Inspired by how humans summarize long documents, we propose an accurate and fast summarization model that first selects salient sentences and then rewrites them abstractively (i.e., compresses and paraphrases) to generate a concise overall summary. We use a novel sentence-level policy gradient method to bridge the non-differentiable computation between these two neural networks in a hierarchical way, while maintaining language fluency. Empirically, we achieve the new state-of-the-art on all metrics (including human evaluation) on the CNN/Daily Mail dataset, as well as significantly higher abstractiveness scores. Moreover, by first operating at the sentence-level and then the word-level, we enable parallel decoding of our neural generative model that results in substantially faster (10-20x) inference speed as well as 4x faster training convergence than previous long-paragraph encoder-decoder models. We also demonstrate the generalization of our model on the test-only DUC-2002 dataset, where we achieve higher scores than a state-of-the-art model.",
+}
+
+@inproceedings{li-etal-2018-paraphrase,
+    title = "Paraphrase Generation with Deep Reinforcement Learning",
+    author = "Li, Zichao  and
+      Jiang, Xin  and
+      Shang, Lifeng  and
+      Li, Hang",
+    booktitle = "Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing",
+    month = oct # "-" # nov,
+    year = "2018",
+    address = "Brussels, Belgium",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/D18-1421",
+    doi = "10.18653/v1/D18-1421",
+    pages = "3865--3878",
+    abstract = "Automatic generation of paraphrases from a given sentence is an important yet challenging task in natural language processing (NLP). In this paper, we present a deep reinforcement learning approach to paraphrase generation. Specifically, we propose a new framework for the task, which consists of a generator and an evaluator, both of which are learned from data. The generator, built as a sequence-to-sequence learning model, can produce paraphrases given a sentence. The evaluator, constructed as a deep matching model, can judge whether two sentences are paraphrases of each other. The generator is first trained by deep learning and then further fine-tuned by reinforcement learning in which the reward is given by the evaluator. For the learning of the evaluator, we propose two methods based on supervised learning and inverse reinforcement learning respectively, depending on the type of available training data. Experimental results on two datasets demonstrate the proposed models (the generators) can produce more accurate paraphrases and outperform the state-of-the-art methods in paraphrase generation in both automatic evaluation and human evaluation.",
+}
+
+@inproceedings{clark-manning-2016-deep,
+    title = "Deep Reinforcement Learning for Mention-Ranking Coreference Models",
+    author = "Clark, Kevin  and
+      Manning, Christopher D.",
+    booktitle = "Proceedings of the 2016 Conference on Empirical Methods in Natural Language Processing",
+    month = nov,
+    year = "2016",
+    address = "Austin, Texas",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/D16-1245",
+    doi = "10.18653/v1/D16-1245",
+    pages = "2256--2262",
+}
+
+@inproceedings{goyal-2019,
+  title     = {Using Natural Language for Reward Shaping in Reinforcement Learning},
+  author    = {Goyal, Prasoon and Niekum, Scott and Mooney, Raymond J.},
+  booktitle = {Proceedings of the Twenty-Eighth International Joint Conference on
+               Artificial Intelligence, {IJCAI-19}},
+  publisher = {International Joint Conferences on Artificial Intelligence Organization},             
+  pages     = {2385--2391},
+  year      = {2019},
+  month     = {7},
+  doi       = {10.24963/ijcai.2019/331},
+  url       = {https://doi.org/10.24963/ijcai.2019/331},
+}
+
+@inproceedings{branavan-2009,
+author = {Branavan, S. R. K. and Chen, Harr and Zettlemoyer, Luke S. and Barzilay, Regina},
+title = {Reinforcement Learning for Mapping Instructions to Actions},
+year = {2009},
+isbn = {9781932432459},
+publisher = {Association for Computational Linguistics},
+address = {USA},
+abstract = {In this paper, we present a reinforcement learning approach for mapping natural language instructions to sequences of executable actions. We assume access to a reward function that defines the quality of the executed actions. During training, the learner repeatedly constructs action sequences for a set of documents, executes those actions, and observes the resulting reward. We use a policy gradient algorithm to estimate the parameters of a log-linear model for action selection. We apply our method to interpret instructions in two domains --- Windows troubleshooting guides and game tutorials. Our results demonstrate that this method can rival supervised learning techniques while requiring few or no annotated training examples.},
+booktitle = {Proceedings of the Joint Conference of the 47th Annual Meeting of the ACL and the 4th International Joint Conference on Natural Language Processing of the AFNLP: Volume 1 - Volume 1},
+pages = {82–90},
+numpages = {9},
+location = {Suntec, Singapore},
+series = {ACL '09}
+}
+
+@inproceedings{yogatama-2017,
+author = {Yogatama, D and Dyer, C and Grefenstette, E and Ling, W},
+title = {Learning to compose words into sentences with reinforcement learning},
 year = {2017},
-title = {Thought disorder measured as random speech structure classifies negative symptoms and schizophrenia diagnosis 6 months in advance},
-volume = {3},
-journal = {npj Schizophrenia},
+publisher = {International Conference on Learning Representations},
 }
 
-@article{Mota2012,
-author = {N. Mota and N. Vasconcelos and N. Lemos and A. Pieretti and O. Kinouchi and G. Cecchi and M. Copelli and S. Ribeiro},
-year = {2012},
-title = {Speech Graphs Provide a Quantitative Measure of Thought Disorder in Psychosis},
-volume = {7},
-journal = {PloS one},
+@inproceedings{ling-etal-2017-learning,
+    title = "Learning to Diagnose: Assimilating Clinical Narratives using Deep Reinforcement Learning",
+    author = "Ling, Yuan  and
+      Hasan, Sadid A.  and
+      Datla, Vivek  and
+      Qadir, Ashequl  and
+      Lee, Kathy  and
+      Liu, Joey  and
+      Farri, Oladimeji",
+    booktitle = "Proceedings of the Eighth International Joint Conference on Natural Language Processing (Volume 1: Long Papers)",
+    month = nov,
+    year = "2017",
+    address = "Taipei, Taiwan",
+    publisher = "Asian Federation of Natural Language Processing",
+    url = "https://www.aclweb.org/anthology/I17-1090",
+    pages = "895--905",
+    abstract = "Clinical diagnosis is a critical and non-trivial aspect of patient care which often requires significant medical research and investigation based on an underlying clinical scenario. This paper proposes a novel approach by formulating clinical diagnosis as a reinforcement learning problem. During training, the reinforcement learning agent mimics the clinician{'}s cognitive process and learns the optimal policy to obtain the most appropriate diagnoses for a clinical narrative. This is achieved through an iterative search for candidate diagnoses from external knowledge sources via a sentence-by-sentence analysis of the inherent clinical context. A deep Q-network architecture is trained to optimize a reward function that measures the accuracy of the candidate diagnoses. Experiments on the TREC CDS datasets demonstrate the effectiveness of our system over various non-reinforcement learning-based systems.",
 }
 
-@article{LanginSchizo1,
-author = {G. Kuperberg},
-year = {2010},
-pages = {576-589},
-title = {Language in Schizophrenia Part 1: An Introduction},
-volume = {4},
-journal = {Language and linguistics compass},
+@inproceedings{guu-etal-2017-language,
+    title = "From Language to Programs: Bridging Reinforcement Learning and Maximum Marginal Likelihood",
+    author = "Guu, Kelvin  and
+      Pasupat, Panupong  and
+      Liu, Evan  and
+      Liang, Percy",
+    booktitle = "Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    month = jul,
+    year = "2017",
+    address = "Vancouver, Canada",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/P17-1097",
+    doi = "10.18653/v1/P17-1097",
+    pages = "1051--1062",
+    abstract = "Our goal is to learn a semantic parser that maps natural language utterances into executable programs when only indirect supervision is available: examples are labeled with the correct execution result, but not the program itself. Consequently, we must search the space of programs for those that output the correct result, while not being misled by \textit{spurious programs}: incorrect programs that coincidentally output the correct result. We connect two common learning paradigms, reinforcement learning (RL) and maximum marginal likelihood (MML), and then present a new learning algorithm that combines the strengths of both. The new algorithm guards against spurious programs by combining the systematic search traditionally employed in MML with the randomized exploration of RL, and by updating parameters such that probability is spread more evenly across consistent programs. We apply our learning algorithm to a new neural semantic parser and show significant gains over existing state-of-the-art results on a recent context-dependent semantic parsing task.",
 }
 
+@paper{xiangrong-2018,
+	author = {Xiangrong Zeng and Shizhu He and Kang Liu and Jun Zhao},
+	title = {Large Scaled Relation Extraction With Reinforcement Learning},
+	conference = {AAAI Conference on Artificial Intelligence},
+	year = {2018},
+	keywords = {relation extraction; reinforcement learning; large scaled},
+	abstract = {Sentence relation extraction aims to extract relational facts from sentences, which is an important task in natural language processing field. Previous models rely on the manually labeled supervised dataset. However, the human annotation is costly and limits to the number of relation and data size, which is difficult to scale to large domains. In order to conduct largely scaled relation extraction, we utilize an existing knowledge base to heuristically align with texts, which not rely on human annotation and easy to scale. However, using distant supervised data for relation extraction is facing a new challenge: sentences in the distant supervised dataset are not directly labeled and not all sentences that mentioned an entity pair can represent the relation between them. To solve this problem, we propose a novel model with reinforcement learning. The relation of the entity pair is used as distant supervision and guide the training of relation extractor with the help of reinforcement learning method. We conduct two types of experiments on a publicly released dataset. Experiment results demonstrate the effectiveness of the proposed method compared with baseline models, which achieves 13.36\% improvement.},
 
-@article{Manschreck,
-author = {T. C. Manschreck and B. A. Maher and J. E. Rosenthal and J. Berner},
-year = {1991},
-pages = {35-41},
-title = {Reduced primacy and related features in schizophrenia},
-volume = {5},
-journal = {Schizophrenia Research},
+	url = {https://www.aaai.org/ocs/index.php/AAAI/AAAI18/paper/view/16257}
 }
-
-@article{Han,
-author = {S. D. Han, and P. Nestor and M. Shenton and M. Niznikiewicz and G. Hannah and R. McCarley},
-year = {2003},
-month = {07},
-pages = {255-63},
-title = {Associative memory in chronic schizophrenia: A computational model},
-volume = {61},
-journal = {Schizophrenia research},
-}
-
-@article{Elvevag2007,
-author = {B. Elvevåg and P. Foltz and D. Weinberger and T. Goldberg},
-year = {2007},
-month = {08},
-pages = {304-16},
-title = {Elvevåg B, Foltz PW, Weinberger DR, Goldberg TE. Quantifying incoherence in speech: an automated methodology and novel application to schizophrenia},
-volume = {93},
-journal = {Schizophrenia research},
-}
-
-@article{Sanders,
-author = {L. Sanders and J. Adams and H. Tager-Flusberg and M. Shenton},
-year = {1995},
-month = {09},
-pages = {325-338},
-title = {A comparison of clinical and linguistic indices of deviance in the verbal discourse of schizophrenia},
-volume = {16},
-journal = {Applied Psycholinguistics},
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-@book{BirdKleinLoper09,
-  author = {Steven Bird and Ewan Klein and Edward Loper},
-  title = {{Natural Language Processing with Python}},
-  publisher = {O'Reilly Media},
-  year = 2009
-}
-
-@article{Boyd.2015,
- author = {Boyd, Ryan L. and Pennebaker, James W.},
- year = {2015},
- title = {Did Shakespeare write double falsehood? Identifying individuals by creating psychological signatures with text analysis},
- pages = {570--582},
- volume = {26},
- number = {5},
- journal = {Psychological science},
-}
-
-
-@article{Davies.2007,
- author = {Archer, Dawn and Rayson, Paul and Baron, Alistair and Culpeper, Jonathan and Smith, Nicholas Ross},
- year = {2007},
- title = {Tagging the Bard:~Evaluating the Accuracy of a Modern POS~Tagger on Early Modern English Corpora},
- publisher = {Lancaster  EPrint: Lancaster University}
-}
-
-
-@article{Diederich.2003,
- author = {Diederich, Joachim and Kindermann, J{\"o}rg and Leopold, Edda and Paass, Gerhard},
- year = {2003},
- title = {Authorship Attribution with Support Vector Machines},
- pages = {109--123},
- volume = {19},
- number = {1-2},
- journal = {Applied Intelligence}
-}
-
-
-@misc{Fox.2012,
- author = {Fox, Neal and Ehmoda, Omran and Charniak, Eugene},
- year = {2012},
- title = {Statistical Stylometrics and the Marlowe-Shakespeare Authorship Debate},
- url = {http://cs.brown.edu/research/pubs/theses/masters/2012/ehmoda.pdf},
- urldate = {11.01.2019}
-}
-
-@book{Taylor.2014,
- author = {Taylor, Gary and Lavagnino, John},
- year = {2014},
- title = {Thomas Middleton and Early Modern Textual Culture},
- publisher = {Oxford University Press: Oxford}
-}
-
-
-
-@InProceedings{honnibal-johnson:2015:EMNLP,
-  author    = {Honnibal, Matthew  and  Johnson, Mark},
-  title     = {An Improved Non-monotonic Transition System for Dependency Parsing},
-  booktitle = {Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing},
-  month     = {September},
-  year      = {2015},
-  address   = {Lisbon, Portugal},
-  publisher = {Association for Computational Linguistics},
-  pages     = {1373--1378},
-  url       = {https://aclweb.org/anthology/D/D15/D15-1162}
-}
-
-@article{Mendenhall.1901,
- author = {Mendenhall, Thomas Corwin},
- year = {1901},
- title = {A mechanical solution of a literary problem.},
- pages = {98--105},
- volume = {60},
- journal = {The Popular Science Monthly},
-}
-
-@inproceedings{mckinney2010data,
-  title={Data structures for statistical computing in python},
-  author={McKinney, Wes and others},
-  booktitle={Proceedings of the 9th Python in Science Conference},
-  volume={445},
-  pages={51--56},
-  year={2010},
-  organization={Austin, TX}
-}
-
-@book{oliphant2006guide, 
-  title={A guide to NumPy}, 
-  author={Oliphant, Travis E}, 
-  volume={1}, 
-  year={2006}, 
-  publisher={Trelgol Publishing USA} 
-}
-
-@article{Pinsken.2008,
- author = {Pinsken, Daryl},
- year = {2008},
- title = {Marlowe’s Ghost: The Blacklisting of the Man Who Was Shakespeare.},
- pages = {55},
- volume = {60},
- journal = {iUniverse},
-}
-
-@article{scikit-learn,
- title={Scikit-learn: Machine Learning in {P}ython},
- author={Pedregosa, F. and Varoquaux, G. and Gramfort, A. and Michel, V.
-         and Thirion, B. and Grisel, O. and Blondel, M. and Prettenhofer, P.
-         and Weiss, R. and Dubourg, V. and Vanderplas, J. and Passos, A. and
-         Cournapeau, D. and Brucher, M. and Perrot, M. and Duchesnay, E.},
- journal={Journal of Machine Learning Research},
- volume={12},
- pages={2825--2830},
- year={2011}
-}
-
-@article{Stamatatos.2009,
- author = {Stamatatos, Efstathios},
- year = {2009},
- title = {A survey of modern authorship attribution methods},
- pages = {538--556},
- volume = {60},
- number = {3},
- journal = {Journal of the American Society for Information Science and Technology},
-}
-
-
-@article{SudheepElayidom.2013,
- author = {{Sudheep Elayidom}, M. and Jose, Chinchu and Puthussery, Anitta and {K Sasi}, Neenu},
- year = {2013},
- title = {Text Classification for Authorship Attribution Analysis},
- pages = {1--10},
- volume = {4},
- number = {5},
- journal = {Advanced Computing: An International Journal},
-}
-
-
-@article{Zheng.2006,
- author = {Zheng, Rong and Li, Jiexun and Chen, Hsinchun and Huang, Zan},
- year = {2006},
- title = {A Framework for Authorship Identification of online Messages: Writing-style features and classification techniques},
- pages = {378--393},
- volume = {57},
- number = {3},
- journal = {Journal of the American Society for Information Science and Technology},
-}
-
-@article{Schmid,
- author = {Schmid Helmut and Laws, Florian},
- year = {2008},
- title = {Estimation of Conditional Probabilities With Decision Trees and an
-Application to Fine-Grained POS Tagging},
- pages = {777--784},
- volume = {57},
- number = {3},
- journal = {Coling 2008 Organizing Committee: Manchester, UK},
-}
-
-
