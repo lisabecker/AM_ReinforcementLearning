@@ -23,7 +23,7 @@
 
 
 \section{Introduction}
-In 2016, DeepMind put Reinforcement Learning (RL) in the spotlights by developing AlphaGo \citep{alphago}. Since then, RL has made many advantages in various subdomains, one of them being Natural Language Processing (NLP). As stated in \citet{ijcai2019}, both domains influence each other. While we can gain new linguistic knowledge by getting insight into how RL agents deal with language, NLP can be used to enhance RL models. Since RL in NLP started to become more popular, various subdomains and applications emerged, such as Article summarization, Question Generation and Answering, Dialogue generation, Dialogue Systems, Machine Translation, Text generation.
+In 2016, DeepMind put Reinforcement Learning (RL) in the spotlights by developing AlphaGo \citep{alphago}. Since then, RL has made many advantages in various subdomains, one of them being Natural Language Processing (NLP). As stated in \citet{ijcai2019}, both domains influence each other. While we can gain new linguistic knowledge by getting insight into how RL agents deal with language, NLP can be used to enhance RL models. Therefore, advances in RL for NLP profits both fields. Since RL in NLP started to become more popular, various subdomains and applications emerged, such as Article summarization, Question Generation and Answering, Dialogue generation, Dialogue Systems, Machine Translation and Text generation. 
 
 \section{Background}
 
@@ -35,6 +35,8 @@ More Deep RL is implemented.
 \textbf{Dialogues} have been among the most popular subdomains.\\\\ 
 Most RL models still utilise the the policy gradient REINFORCE algorithm or Deep Q Learning as their method \citep{yasui-etal-2019, zhang-2018, hu-etal-2018-playing, godin-etal-2019-learning, huang-etal-2018-neural, mao-etal-2018-end, ranzato2015sequence, wu-etal-2018-study, clark-manning-2016-deep,yogatama-2017, guu-etal-2017-language, zeng-2018}, while some others exploit Deep Q-Learning \citet{narasimhan-etal-2016-improving, mosallanezhad-etal-2019-deep, ling-etal-2017-learning}. Only a minority of RL models use other methods, such as different variations of the policy gradient method \citet{branavan-2009, li-etal-2018-paraphrase, li-etal-2016-deep, le-fokkens-2017-tackling} or others \citet{dethlefs-cuayahuitl-2011,grissom-ii-etal-2014-dont, he-etal-2016-deep-reinforcement, chen-bansal-2018-fast, goyal-2019}.
 
+As common for a variety of NLP-related tasks, many recent studies still work with LSTMs \citet{yasui-etal-2019, zhang-2018, li-etal-2016-deep}. 
+
 \section{Problems for NLP in RL}
 Research faces a few problems regarding the application of RL in NLP. 
 
@@ -42,7 +44,10 @@ While most research focuses on the reward function in order to maximise the agen
 
 \subsection{Data and Language}
 \textbf{Anglocentrism} dominates most research fields, with NLP and more specifically RL being no exception. This is due to English continuing to be the main language in which research is written and communicated. While this is not a problem per se, it compels many researchers to also use English as their main language for conducting their experiments due to available data and funding for English research. This homogeneity is a common property of a young research field but still needs to be overcome by broadening up to other languages. This is not only important in terms of ethical diversity but also a necessary step to achieve overall application of RL across languages. \\\\
-\textbf{Data} is not only limited in language but also in size and diversity. Since RL models tend to improve by larger corpora, it becomes exponentially difficult to provide datasets of sufficient quality by increase of size. Consequently, many studies are performed on the same datasets.
+\textbf{Data} is not only limited in language but also in size and diversity. Since RL models tend to improve by larger corpora, it becomes exponentially difficult to provide datasets of sufficient quality by increase of size. Consequently, many experiments are performed on the same datasets and thus in the same language. The few studies that concern languages other than English commonly exploit machine translation, for example between English and German \citet{yasui-etal-2019}.
+
+\subsection{Knowledge Representation}
+It is not only crucial for science in which language data is available and being used but also how language is implemented in the other parts of a RL agent. Knowledge representation is an 
 
 \subsection{Evaluation measures}
 The choice of evaluation measures is especially problematic in RL agents that generate language. On one hand, automating evaluation is complex and unreliable but on the other hand, human evaluation is very inefficient in time and resources. Next to the older BLEU or STS score, new approaches have been tested to automatise evaluation: \citet{yasui-etal-2019} trained a BERT-model to recognise semantically similar sentences of a translation model. Here we see that machine translated sentences can achieve human performances, but human translation is still superior when it spans more than one sentence.
