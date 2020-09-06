@@ -423,3 +423,88 @@ publisher = {International Conference on Learning Representations},
   biburl    = {https://dblp.org/rec/journals/corr/LongPL16.bib},
   bibsource = {dblp computer science bibliography, https://dblp.org}
 }
+
+@inproceedings{papineni-etal-2002-bleu,
+    title = "{B}leu: a Method for Automatic Evaluation of Machine Translation",
+    author = "Papineni, Kishore  and
+      Roukos, Salim  and
+      Ward, Todd  and
+      Zhu, Wei-Jing",
+    booktitle = "Proceedings of the 40th Annual Meeting of the Association for Computational Linguistics",
+    month = jul,
+    year = "2002",
+    address = "Philadelphia, Pennsylvania, USA",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/P02-1040",
+    doi = "10.3115/1073083.1073135",
+    pages = "311--318",
+}
+
+
+@inproceedings{lin-2004-rouge,
+    title = "{ROUGE}: A Package for Automatic Evaluation of Summaries",
+    author = "Lin, Chin-Yew",
+    booktitle = "Text Summarization Branches Out",
+    month = jul,
+    year = "2004",
+    address = "Barcelona, Spain",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/W04-1013",
+    pages = "74--81",
+}
+
+
+@inproceedings{banerjee-lavie-2005-meteor,
+    title = "{METEOR}: An Automatic Metric for {MT} Evaluation with Improved Correlation with Human Judgments",
+    author = "Banerjee, Satanjeev  and
+      Lavie, Alon",
+    booktitle = "Proceedings of the {ACL} Workshop on Intrinsic and Extrinsic Evaluation Measures for Machine Translation and/or Summarization",
+    month = jun,
+    year = "2005",
+    address = "Ann Arbor, Michigan",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/W05-0909",
+    pages = "65--72",
+}
+
+@misc{reiter_2020_why, title={Why do we still use 18-year old BLEU?}, url=https://ehudreiter.com/2020/03/02/why-use-18-year-old-bleu/}, journal={Ehud Reiter's Blog}, author={Reiter, Ehud}, year={2020}, month={Mar}}
+
+@misc{reiter_2020_small, title={Small differences in BLEU are meaningless}, url={https://ehudreiter.com/2020/07/28/small-differences-in-bleu-are-meaningless/}, journal={Ehud Reiter's Blog}, author={Reiter, Ehud}, year={2020}, month={Jul}}
+
+@inproceedings{mathur-etal-2020-tangled,
+    title = "Tangled up in {BLEU}: Reevaluating the Evaluation of Automatic Machine Translation Evaluation Metrics",
+    author = "Mathur, Nitika  and
+      Baldwin, Timothy  and
+      Cohn, Trevor",
+    booktitle = "Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics",
+    month = jul,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/2020.acl-main.448",
+    doi = "10.18653/v1/2020.acl-main.448",
+    pages = "4984--4997",
+    abstract = "Automatic metrics are fundamental for the development and evaluation of machine translation systems. Judging whether, and to what extent, automatic metrics concur with the gold standard of human evaluation is not a straightforward problem. We show that current methods for judging metrics are highly sensitive to the translations used for assessment, particularly the presence of outliers, which often leads to falsely confident conclusions about a metric{'}s efficacy. Finally, we turn to pairwise system ranking, developing a method for thresholding performance improvement under an automatic metric against human judgements, which allows quantification of type I versus type II errors incurred, i.e., insignificant human differences in system quality that are accepted, and significant human differences that are rejected. Together, these findings suggest improvements to the protocols for metric evaluation and system performance evaluation in machine translation.",
+}
+
+@article{reiter-2018-astructured,
+author = {Reiter, Ehud},
+title = {A Structured Review of the Validity of BLEU},
+journal = {Computational Linguistics},
+volume = {44},
+number = {3},
+pages = {393-401},
+year = {2018},
+doi = {10.1162/coli\_a\_00322},
+
+URL = { 
+        https://doi.org/10.1162/coli_a_00322
+    
+},
+eprint = { 
+        https://doi.org/10.1162/coli_a_00322
+    
+}
+,
+    abstract = { The BLEU metric has been widely used in NLP for over 15 years to evaluate NLP systems, especially in machine translation and natural language generation. I present a structured review of the evidence on whether BLEU is a valid evaluation technique—in other words, whether BLEU scores correlate with real-world utility and user-satisfaction of NLP systems; this review covers 284 correlations reported in 34 papers. Overall, the evidence supports using BLEU for diagnostic evaluation of MT systems (which is what it was originally proposed for), but does not support using BLEU outside of MT, for evaluation of individual texts, or for scientific hypothesis testing. }
+}
