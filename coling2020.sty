@@ -1,17 +1,20 @@
+% File coling2018.sty
+
+% This is the LaTeX style file for Coling 2018. It is identical to
+% the style file for Coling 2016.
+
+% This is the LaTeX style file for Coling 2016. It is identical to
+% the style file for Coling 2014.
+
+% This is the LaTeX style file for Coling 2014. It is nearly identical to
+% the style file for ACL 2014.
 %
-% 2018: modified line numbering to be in gainsboro gray color so one
-% can write comments on the margins.	-- Shay Cohen / Kevin Gimpel / Wei Lu
+% Changes made: switched to single column format and removed margin around
+% abtract
 
-% 2017: modified to support DOI links in bibliography.  Now uses
-% natbib package rather than defining citation commands in this file.
-% Use with acl_natbib.bst bib style.  -- Dan Gildea
-
-% This is the LaTeX style for ACL 2016. It contains Margaret Mitchell's
-% line number adaptations (ported by Hai Zhao and Yannick Versley).
-
-% It is nearly identical to the style files for ACL 2015,
-% ACL 2014, EACL 2006, ACL2005, ACL 2002, ACL 2001, ACL 2000,
-% EACL 95 and EACL 99. 
+% This is the LaTeX style file for ACL 2014. It is nearly identical to
+% the style files for ACL 2013, EACL 2006, ACL2005, ACL 2002, ACL
+% 2001, ACL 2000, EACL 95 and EACL 99. 
 %
 % Changes made include: adapt layout to A4 and centimeters, widen abstract
 
@@ -20,6 +23,21 @@
 % instructions to reflect use of \documentclass rather than \documentstyle
 % and removing the white space before the title on the first page
 % -- John Chen, June 29, 2000
+
+% To convert from submissions prepared using the style file aclsub.sty
+% prepared for the ACL 2000 conference, proceed as follows:
+% 1) Remove submission-specific information:  \whichsession, \id,
+%    \wordcount, \otherconferences, \area, \keywords
+% 2) \summary should be removed.  The summary material should come
+%     after \maketitle and should be in the ``abstract'' environment
+% 3) Check all citations.  This style should handle citations correctly
+%    and also allows multiple citations separated by semicolons.
+% 4) Check figures and examples.  Because the final format is double-
+%    column, some adjustments may have to be made to fit text in the column
+%    or to choose full-width (\figure*} figures.
+% 5) Change the style reference from aclsub to acl2000, and be sure
+%    this style file is in your TeX search path
+
 
 % This is the LaTeX style file for EACL-95.  It is identical to the
 % style file for ANLP '94 except that the margins are adjusted for A4
@@ -55,7 +73,7 @@
 % improvements, etc.  please let me know.  My e-mail address is:
 %       pfps@research.att.com
 
-% Papers are to be prepared using the ``acl_natbib'' bibliography style,
+% Papers are to be prepared using the ``acl'' bibliography style,
 % as follows:
 %       \documentclass[11pt]{article}
 %       \usepackage{acl2000}
@@ -65,7 +83,7 @@
 %       \begin{document}
 %       ...
 %       \bibliography{bibliography-file}
-%       \bibliographystyle{acl_natbib}
+%       \bibliographystyle{acl}
 %       \end{document}
 
 % Author information can be set in various styles:
@@ -86,31 +104,10 @@
 
 % If the title and author information does not fit in the area allocated,
 % place \setlength\titlebox{<new height>} right after
-% \usepackage{acl2015}
+% \usepackage{coling2018}
 % where <new height> can be something larger than 5cm
 
-% include hyperref, unless user specifies nohyperref option like this:
-% \usepackage[nohyperref]{acl2018}
-\newif\ifacl@hyperref
-\DeclareOption{hyperref}{\acl@hyperreftrue}
-\DeclareOption{nohyperref}{\acl@hyperreffalse}
-\ExecuteOptions{hyperref} % default is to use hyperref
-\ProcessOptions\relax
-\ifacl@hyperref
-  \RequirePackage{hyperref}
-  \usepackage{xcolor}		% make links dark blue
-  \definecolor{darkblue}{rgb}{0, 0, 0.5}
-  \hypersetup{colorlinks=true,citecolor=darkblue, linkcolor=darkblue, urlcolor=darkblue}
-\else
-  % This definition is used if the hyperref package is not loaded.
-  % It provides a backup, no-op definiton of \href.
-  % This is necessary because \href command is used in the acl_natbib.bst file.
-  \def\href#1#2{{#2}}
-  % We still need to load xcolor in this case because the lighter line numbers require it. (SC/KG/WL) 
-  \usepackage{xcolor}
-\fi
-
-\typeout{Conference Style for ACL 2018}
+\typeout{Conference Style for COLING 2020 -- prepared 29 Sep. 2019}
 
 % NOTE:  Some laser printers have a serious problem printing TeX output.
 % These printing devices, commonly known as ``write-white'' laser
@@ -118,7 +115,7 @@
 % problem, a darker set of fonts must be created for these devices.
 %
 
-\newcommand{\Thanks}[1]{\thanks{\ #1}}
+
 
 % A4 modified by Eneko; again modified by Alexander for 5cm titlebox
 \setlength{\paperwidth}{21cm}   % A4
@@ -136,165 +133,69 @@
 \pagestyle{empty}
 
 
-\flushbottom \twocolumn \sloppy
+\flushbottom \sloppy
 
 % We're never going to need a table of contents, so just flush it to
 % save space --- suggested by drstrip@sandia-2
 \def\addcontentsline#1#2#3{}
 
-\newif\ifaclfinal
-\aclfinalfalse
-\def\aclfinalcopy{\global\aclfinaltrue}
 
-%% ----- Set up hooks to repeat content on every page of the output doc, 
-%% necessary for the line numbers in the submitted version.  --MM
-%%
-%% Copied from CVPR 2015's cvpr_eso.sty, which appears to be largely copied from everyshi.sty.
-%%
-%% Original cvpr_eso.sty available at: http://www.pamitc.org/cvpr15/author_guidelines.php
-%% Original evershi.sty available at: https://www.ctan.org/pkg/everyshi
-%%
-%% Copyright (C) 2001 Martin Schr\"oder:
-%% 
-%%                         Martin Schr"oder
-%%                         Cr"usemannallee 3
-%%                         D-28213 Bremen
-%%                         Martin.Schroeder@ACM.org
-%% 
-%% This program may be redistributed and/or modified under the terms
-%% of the LaTeX Project Public License, either version 1.0 of this
-%% license, or (at your option) any later version.
-%% The latest version of this license is in
-%%    CTAN:macros/latex/base/lppl.txt.
-%% 
-%% Happy users are requested to send [Martin] a postcard. :-)
-%%
-\newcommand{\@EveryShipoutACL@Hook}{}
-\newcommand{\@EveryShipoutACL@AtNextHook}{}
-\newcommand*{\EveryShipoutACL}[1]
-   {\g@addto@macro\@EveryShipoutACL@Hook{#1}}
-\newcommand*{\AtNextShipoutACL@}[1]
-   {\g@addto@macro\@EveryShipoutACL@AtNextHook{#1}}
-\newcommand{\@EveryShipoutACL@Shipout}{%
-   \afterassignment\@EveryShipoutACL@Test
-   \global\setbox\@cclv= %
-   }
-\newcommand{\@EveryShipoutACL@Test}{%
-   \ifvoid\@cclv\relax
-      \aftergroup\@EveryShipoutACL@Output
-   \else
-      \@EveryShipoutACL@Output
-   \fi%
-   }
-\newcommand{\@EveryShipoutACL@Output}{%
-   \@EveryShipoutACL@Hook%
-   \@EveryShipoutACL@AtNextHook%
-      \gdef\@EveryShipoutACL@AtNextHook{}%
-   \@EveryShipoutACL@Org@Shipout\box\@cclv%
-   }
-\newcommand{\@EveryShipoutACL@Org@Shipout}{}
-\newcommand*{\@EveryShipoutACL@Init}{%
-   \message{ABD: EveryShipout initializing macros}%
-   \let\@EveryShipoutACL@Org@Shipout\shipout
-   \let\shipout\@EveryShipoutACL@Shipout
-   }
-\AtBeginDocument{\@EveryShipoutACL@Init}
+\newif\ifcolingfinal
+\colingfinalfalse
+\def\colingfinalcopy{\global\colingfinaltrue}
 
-%% ----- Set up for placing additional items into the submitted version --MM
-%%
-%% Based on eso-pic.sty
-%%
-%% Original available at: https://www.ctan.org/tex-archive/macros/latex/contrib/eso-pic
-%% Copyright (C) 1998-2002 by Rolf Niepraschk <niepraschk@ptb.de>
-%% 
-%% Which may be distributed and/or modified under the conditions of
-%% the LaTeX Project Public License, either version 1.2 of this license
-%% or (at your option) any later version.  The latest version of this
-%% license is in:
-%% 
-%%    http://www.latex-project.org/lppl.txt
-%% 
-%% and version 1.2 or later is part of all distributions of LaTeX version
-%% 1999/12/01 or later.
-%%
-%% In contrast to the original, we do not include the definitions for/using:
-%% gridpicture, div[2], isMEMOIR[1], gridSetup[6][], subgridstyle{dotted}, labelfactor{}, gap{}, gridunitname{}, gridunit{}, gridlines{\thinlines}, subgridlines{\thinlines}, the {keyval} package, evenside margin, nor any definitions with 'color'.
-%%
-%% These are beyond  what is needed for the NAACL style.
-%%
-\newcommand\LenToUnit[1]{#1\@gobble}
-\newcommand\AtPageUpperLeft[1]{%
-  \begingroup
-    \@tempdima=0pt\relax\@tempdimb=\ESO@yoffsetI\relax
-    \put(\LenToUnit{\@tempdima},\LenToUnit{\@tempdimb}){#1}%
-  \endgroup
-}
-\newcommand\AtPageLowerLeft[1]{\AtPageUpperLeft{%
-  \put(0,\LenToUnit{-\paperheight}){#1}}}
-\newcommand\AtPageCenter[1]{\AtPageUpperLeft{%
-  \put(\LenToUnit{.5\paperwidth},\LenToUnit{-.5\paperheight}){#1}}}
-\newcommand\AtPageLowerCenter[1]{\AtPageUpperLeft{%
-  \put(\LenToUnit{.5\paperwidth},\LenToUnit{-\paperheight}){#1}}}%
-\newcommand\AtPageLowishCenter[1]{\AtPageUpperLeft{%
-  \put(\LenToUnit{.5\paperwidth},\LenToUnit{-.96\paperheight}){#1}}}
-\newcommand\AtTextUpperLeft[1]{%
-  \begingroup
-    \setlength\@tempdima{1in}%
-    \advance\@tempdima\oddsidemargin%
-    \@tempdimb=\ESO@yoffsetI\relax\advance\@tempdimb-1in\relax%
-    \advance\@tempdimb-\topmargin%
-    \advance\@tempdimb-\headheight\advance\@tempdimb-\headsep%
-    \put(\LenToUnit{\@tempdima},\LenToUnit{\@tempdimb}){#1}%
-  \endgroup
-}
-\newcommand\AtTextLowerLeft[1]{\AtTextUpperLeft{%
-  \put(0,\LenToUnit{-\textheight}){#1}}}
-\newcommand\AtTextCenter[1]{\AtTextUpperLeft{%
-  \put(\LenToUnit{.5\textwidth},\LenToUnit{-.5\textheight}){#1}}}
-\newcommand{\ESO@HookI}{} \newcommand{\ESO@HookII}{}
-\newcommand{\ESO@HookIII}{}
-\newcommand{\AddToShipoutPicture}{%
-  \@ifstar{\g@addto@macro\ESO@HookII}{\g@addto@macro\ESO@HookI}}
-\newcommand{\ClearShipoutPicture}{\global\let\ESO@HookI\@empty}
-\newcommand{\@ShipoutPicture}{%
-  \bgroup
-    \@tempswafalse%
-    \ifx\ESO@HookI\@empty\else\@tempswatrue\fi%
-    \ifx\ESO@HookII\@empty\else\@tempswatrue\fi%
-    \ifx\ESO@HookIII\@empty\else\@tempswatrue\fi%
-    \if@tempswa%
-      \@tempdima=1in\@tempdimb=-\@tempdima%
-      \advance\@tempdimb\ESO@yoffsetI%
-      \unitlength=1pt%
-      \global\setbox\@cclv\vbox{%
-        \vbox{\let\protect\relax
-          \pictur@(0,0)(\strip@pt\@tempdima,\strip@pt\@tempdimb)%
-            \ESO@HookIII\ESO@HookI\ESO@HookII%
-            \global\let\ESO@HookII\@empty%
-          \endpicture}%
-          \nointerlineskip%
-        \box\@cclv}%
-    \fi
-  \egroup
-}
-\EveryShipoutACL{\@ShipoutPicture}
-\newif\ifESO@dvips\ESO@dvipsfalse 
-\newif\ifESO@grid\ESO@gridfalse
-\newif\ifESO@texcoord\ESO@texcoordfalse
-\newcommand*\ESO@griddelta{}\newcommand*\ESO@griddeltaY{}
-\newcommand*\ESO@gridDelta{}\newcommand*\ESO@gridDeltaY{}
-\newcommand*\ESO@yoffsetI{}\newcommand*\ESO@yoffsetII{}
-\ifESO@texcoord
-  \def\ESO@yoffsetI{0pt}\def\ESO@yoffsetII{-\paperheight}
-  \edef\ESO@griddeltaY{-\ESO@griddelta}\edef\ESO@gridDeltaY{-\ESO@gridDelta}
-\else
-  \def\ESO@yoffsetI{\paperheight}\def\ESO@yoffsetII{0pt}
-  \edef\ESO@griddeltaY{\ESO@griddelta}\edef\ESO@gridDeltaY{\ESO@gridDelta}
-\fi
+% Footnote without marker for copyright/licence statement
+% Code taken from
+% http://tex.stackexchange.com/questions/30720/footnote-without-a-marker
+% which claims to have taken it, in turn, from
+% http://help-csli.stanford.edu/tex/latex-footnotes.shtml#unnumber
+% Note the comment that there may be numbering problems if
+% you are using the hyperref package. 
+\def\blfootnote{\xdef\@thefnmark{}\@footnotetext}
 
+% Code taken from
+% https://tex.stackexchange.com/questions/124410/hyperref-modifies-bibliography-style-of-acl-style-files
+% which fixes incorrect bibliography styles when using the hyperref package
+\newcommand{\@BIBLABEL}{\@emptybiblabel}
+\newcommand{\@emptybiblabel}[1]{}
 
+\newcommand\outauthor{
+	\begin{tabular}[t]{c}
+		\ifcolingfinal 
+		\bf\@author
+		\else 
+		% Avoiding common accidental de-anonymization issue. --MM
+		\bf Anonymous COLING submission
+		\fi
+	\end{tabular}}
 
-%%%% ----- Begin settings for both submitted and camera-ready version ----- %%%%
+% Title stuff, taken from deproc.
+\def\maketitle{\par
+ \begingroup
+   \def\thefootnote{\fnsymbol{footnote}}
+   \def\@makefnmark{\hbox to 0pt{$^{\@thefnmark}$\hss}}
+   \@maketitle \@thanks
+ \endgroup
+ \setcounter{footnote}{0}
+ \let\maketitle\relax \let\@maketitle\relax
+ \gdef\@thanks{}\gdef\@author{}\gdef\@title{}\let\thanks\relax}
+\def\@maketitle{\vbox to \titlebox{\hsize\textwidth
+ \linewidth\hsize \vskip 0.125in minus 0.125in \centering
+ {\Large\bf \@title \par} \vskip 0.2in plus 1fil minus 0.1in
+ {\def\and{\unskip\enspace{\rm and}\enspace}%
+  \def\And{\end{tabular}\hss \egroup \hskip 1in plus 2fil 
+           \hbox to 0pt\bgroup\hss \begin{tabular}[t]{c}\bf}%
+  \def\AND{\end{tabular}\hss\egroup \hfil\hfil\egroup
+          \vskip 0.25in plus 1fil minus 0.125in
+           \hbox to \linewidth\bgroup\large \hfil\hfil
+             \hbox to 0pt\bgroup\hss \begin{tabular}[t]{c}\bf}
+  \hbox to \linewidth\bgroup\large \hfil\hfil
+    \hbox to 0pt\bgroup\hss \outauthor 
+                            \hss\egroup
+    \hfil\hfil\egroup}
+  \vskip 0.3in plus 2fil minus 0.1in
+}}
+
 % margins for abstract
 \renewenvironment{abstract}%
 		 {\centerline{\large\bf Abstract}%
@@ -307,17 +208,70 @@
 %\renewenvironment{abstract}{\centerline{\large\bf  
 % Abstract}\vspace{0.5ex}\begin{quote}}{\par\end{quote}\vskip 1ex}
 
-\RequirePackage{natbib}
-% for citation commands in the .tex, authors can use:
-% \citep, \citet, and \citeyearpar for compatibility with natbib, or
-% \cite, \newcite, and \shortcite for compatibility with older ACL .sty files
-\renewcommand\cite{\citep}	% to get "(Author Year)" with natbib    
-\newcommand\shortcite{\citeyearpar}% to get "(Year)" with natbib    
-\newcommand\newcite{\citet}	% to get "Author (Year)" with natbib    
 
 % bibliography
 
+\def\thebibliography#1{\section*{References}
+  \global\def\@listi{\leftmargin\leftmargini
+               \labelwidth\leftmargini \advance\labelwidth-\labelsep
+               \topsep 1pt plus 2pt minus 1pt
+               \parsep 0.25ex plus 1pt \itemsep 0.25ex plus 1pt}
+  \list {[\arabic{enumi}]}{\settowidth\labelwidth{[#1]}\leftmargin\labelwidth
+    \advance\leftmargin\labelsep\usecounter{enumi}}
+    \def\newblock{\hskip .11em plus .33em minus -.07em}
+    \sloppy
+    \sfcode`\.=1000\relax}
+
 \def\@up#1{\raise.2ex\hbox{#1}}
+
+% most of cite format is from aclsub.sty by SMS
+
+% don't box citations, separate with ; and a space
+% also, make the penalty between citations negative: a good place to break
+% changed comma back to semicolon pj 2/1/90
+% \def\@citex[#1]#2{\if@filesw\immediate\write\@auxout{\string\citation{#2}}\fi
+% \def\@citea{}\@cite{\@for\@citeb:=#2\do
+%   {\@citea\def\@citea{;\penalty\@citeseppen\ }\@ifundefined
+%      {b@\@citeb}{{\bf ?}\@warning
+%      {Citation `\@citeb' on page \thepage \space undefined}}%
+% {\csname b@\@citeb\endcsname}}}{#1}}
+
+% don't box citations, separate with ; and a space
+% Replaced for multiple citations (pj) 
+% don't box citations and also add space, semicolon between multiple citations
+\def\@citex[#1]#2{\if@filesw\immediate\write\@auxout{\string\citation{#2}}\fi
+  \def\@citea{}\@cite{\@for\@citeb:=#2\do
+     {\@citea\def\@citea{; }\@ifundefined
+       {b@\@citeb}{{\bf ?}\@warning
+        {Citation `\@citeb' on page \thepage \space undefined}}%
+ {\csname b@\@citeb\endcsname}}}{#1}}
+
+% Allow short (name-less) citations, when used in
+% conjunction with a bibliography style that creates labels like
+%       \citename{<names>, }<year>
+% 
+\let\@internalcite\cite
+\def\cite{\def\citename##1{##1, }\@internalcite}
+\def\shortcite{\def\citename##1{}\@internalcite}
+\def\newcite{\def\citename##1{{\frenchspacing##1} (}\@internalciteb}
+
+% Macros for \newcite, which leaves name in running text, and is
+% otherwise like \shortcite.
+\def\@citexb[#1]#2{\if@filesw\immediate\write\@auxout{\string\citation{#2}}\fi
+  \def\@citea{}\@newcite{\@for\@citeb:=#2\do
+    {\@citea\def\@citea{;\penalty\@m\ }\@ifundefined
+       {b@\@citeb}{{\bf ?}\@warning
+       {Citation `\@citeb' on page \thepage \space undefined}}%
+{\csname b@\@citeb\endcsname}}}{#1}}
+\def\@internalciteb{\@ifnextchar [{\@tempswatrue\@citexb}{\@tempswafalse\@citexb[]}}
+
+\def\@newcite#1#2{{#1\if@tempswa, #2\fi)}}
+
+\def\@biblabel#1{\def\citename##1{##1}[#1]\hfill}
+
+%%% More changes made by SMS (originals in latex.tex)
+% Use parentheses instead of square brackets in the text.
+\def\@cite#1#2{({#1\if@tempswa , #2\fi})}
 
 % Don't put a label in the bibliography at all.  Just use the unlabeled format
 % instead.
@@ -336,7 +290,6 @@
  \sfcode`\.=1000\relax}
 \let\endthebibliography=\endlist
 
-
 % Allow for a bibliography of sources of attested examples
 \def\thesourcebibliography#1{\vskip\parskip%
 \vskip\baselineskip%
@@ -352,6 +305,13 @@
  \sloppy\clubpenalty4000\widowpenalty4000
  \sfcode`\.=1000\relax}
 \let\endthesourcebibliography=\endlist
+
+\def\@lbibitem[#1]#2{\item[]\if@filesw 
+      { \def\protect##1{\string ##1\space}\immediate
+        \write\@auxout{\string\bibcite{#2}{#1}}\fi\ignorespaces}}
+
+\def\@bibitem#1{\item\if@filesw \immediate\write\@auxout
+       {\string\bibcite{#1}{\the\c@enumi}}\fi\ignorespaces}
 
 % sections with less space
 \def\section{\@startsection {section}{1}{\z@}{-2.0ex plus
